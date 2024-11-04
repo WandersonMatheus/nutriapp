@@ -36,15 +36,15 @@ export class CalculatorComponent {
   nivelAtividade: string = 'sedentario';
   caloriasNecessarias: number = 0;
 
-  // Adicione as propriedades aqui
-  input1: number = 0; // ou string, dependendo de como você deseja utilizá-los
+
+  input1: number = 0;
   input2: number = 0;
   input3: number = 0;
 
   calcular() {
-    let fatorAtividade = 1.2; // padrão para sedentário
+    let fatorAtividade = 1.2;
 
-    // Definindo os fatores de atividade
+
     switch (this.nivelAtividade) {
       case 'levemente ativo':
         fatorAtividade = 1.375;
