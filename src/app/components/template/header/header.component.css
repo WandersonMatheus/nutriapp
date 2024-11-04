@@ -1,0 +1,25 @@
+.header{
+  display: flex;
+  align-items: center;
+  background-color: #668C54;
+  justify-content: space-between;
+}
+.header a{
+  color:#9ec58b;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 16px;
+}
+.header a:hover{
+  color: rgb(78, 78, 78);
+}
+#logo{
+  font-family: 'Montserrat';
+  color: #9ec58b;
+  font-size: larger;
+}
+.links{
+  margin-left: auto;
+  display: flex;
+}

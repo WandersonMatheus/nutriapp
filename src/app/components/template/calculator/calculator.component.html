@@ -1,0 +1,40 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+<div class="content">
+  <mat-card-content>
+    <h1>Calculadora de macros</h1>
+    <p>Calcule a quantidade de calorias que você gasta no dia e alcance seus objetivos.</p>
+    <mat-form-field>
+      <mat-label>Peso (kg)</mat-label>
+      <input matInput type="number" [(ngModel)]="peso" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Altura (cm)</mat-label>
+      <input matInput type="number" [(ngModel)]="altura" required>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Idade (anos)</mat-label>
+      <input matInput type="number" [(ngModel)]="idade" required>
+    </mat-form-field>
+    <mat-radio-group [(ngModel)]="sexo">
+      <mat-radio-button value="masculino">Masculino</mat-radio-button>
+      <mat-radio-button value="feminino">Feminino</mat-radio-button>
+    </mat-radio-group>
+    <mat-form-field>
+      <mat-label>Nível de Atividade</mat-label>
+      <mat-select [(ngModel)]="nivelAtividade">
+        <mat-option value="sedentario">Sedentário</mat-option>
+        <mat-option value="levemente ativo">Levemente ativo</mat-option>
+        <mat-option value="moderado">Moderadamente ativo</mat-option>
+        <mat-option value="altamente ativo">Altamente ativo</mat-option>
+        <mat-option value="extremamente ativo">Extremamente ativo</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button mat-raised-button (click)="calcular()">Calcular Calorias</button>
+    <div *ngIf="caloriasNecessarias > 0">
+      <h3>Calorias Necessárias: {{ caloriasNecessarias | number: '1.0-0' }}</h3>
+    </div>
+  </mat-card-content>
+</div>

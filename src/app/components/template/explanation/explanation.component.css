@@ -1,0 +1,16 @@
+.explanation {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  text-align: justify;
+}
+.explanation h3,.explanation h4{
+  font-weight: bolder;
+  text-align: center;
+  justify-content: center;
+}
+p{
+  font-family: 'Roboto',sans-serif;
+  text-align: justify;
+}
